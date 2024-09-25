@@ -78,7 +78,8 @@ const voltageGauge = new JustGage({
     min: 0,
     max: 500, // Sesuaikan dengan rentang yang diinginkan
     title: "Voltage (V)",
-    label: "V"
+    label: "V",
+    relativeGaugeSize: true // Membuat gauge mengikuti ukuran container
 });
 
 const ampereGauge = new JustGage({
@@ -87,7 +88,8 @@ const ampereGauge = new JustGage({
     min: 0,
     max: 100, // Sesuaikan dengan rentang yang diinginkan
     title: "Ampere (A)",
-    label: "A"
+    label: "A",
+    relativeGaugeSize: true // Membuat gauge mengikuti ukuran container
 });
 
 const wattGauge = new JustGage({
@@ -96,7 +98,8 @@ const wattGauge = new JustGage({
     min: 0,
     max: 2000, // Sesuaikan dengan rentang yang diinginkan
     title: "Watt (W)",
-    label: "W"
+    label: "W",
+    relativeGaugeSize: true // Membuat gauge mengikuti ukuran container
 });
 
 // Event listener untuk menghitung dan memperbarui data
