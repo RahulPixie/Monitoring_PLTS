@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Sistem Monitoring PLTS yang dapat memantau Voltage, Ampere, dan Daya dalam waktu nyata dengan tampilan grafik dan gauge.">
+    <title>Sistem Monitoring PLTS</title>
+
+    <!-- Link ke file CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Menyertakan pustaka untuk grafik dan gauge -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/justgage/1.3.1/justgage.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Sistem Monitoring PLTS</h1>
+        </header>
+
+        <!-- Input voltage dan ampere, daya akan dihitung otomatis -->
+        <section class="input-section">
+            <div class="input-group">
+                <input type="number" id="voltage" placeholder="Voltage (V)" required>
+                <input type="number" id="ampere" placeholder="Ampere (A)" required>
+                <button id="submit">Submit</button>
+            </div>
+        </section>
+
+        <!-- Gauge untuk menampilkan Voltage, Ampere, dan Daya (Watt) -->
+        <section class="gauge-section">
+            <div class="gauge-container">
+                <div id="voltageGauge" class="gauge"></div>
+                <div id="ampereGauge" class="gauge"></div>
+                <div id="wattGauge" class="gauge"></div>
+            </div>
+        </section>
+
+        <!-- Grafik untuk Voltage, Ampere, dan Daya (Watt) -->
+        <section class="chart-section">
+            <div class="chart-container">
+                <canvas id="voltageChart"></canvas>
+                <canvas id="ampereChart"></canvas>
+                <canvas id="dayaChart"></canvas>
+            </div>
+        </section>
+    </div>
+
+    <!-- Memuat file JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
